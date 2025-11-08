@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-background-color: darkblue;
+    --shape-border-color: black;
+}
+
+
+nav {
+    background-color: var(--text-background-color);
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    font-weight: 530;
+
+}
+
+h1 {
+    color: var(--text-background-color);
+    margin: 1rem;
+    border-bottom: 1px solid darkgray;
+}
+
+main img {
+    width: 150px;
+    height: auto;
+    border: 1px solid var(--shape-border-color);
+    padding: 2px;
+    box-shadow: 0 0 30px gray;
+    float: right;
+    margin: 0 0 1rem 1rem;
+}
+
+p {
+    margin: 1rem;
+
+}
+
+aside {
+    width: 15rem;
+    text-align: center;
+    position: relative;
+
+}
+
+aside h2 {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+
+}
+
+aside img {
+    width: 200px;
+    height: auto;
+}
+
+footer {
+    margin-top: 10px;
+    border-top: 1px dashed var(--shape-border-color);
+    text-align: center;
+}
+
+/* Class Selectors */
+
+.box {
+    margin: 1rem;
+    border: 1px solid var(--shape-border-color);
+    padding: 1rem;
+    background-color: azure;
+    color: rgb(0, 0, 0);
+}
+
+.indent {
+    padding-left: 2rem;
+}
+
+header,
+footer,
+.grid {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+}

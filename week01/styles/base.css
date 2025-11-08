@@ -9,6 +9,25 @@
     --shape-border-color: black;
 }
 
+#course-title {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    font-size: x-large;
+    padding: 15px;
+
+}
+
+
+
+main {
+    justify-content: center;
+    margin: 1rem 0;
+    border-radius: 10px;
+    display: grid;
+    grid-template: auto 1fr auto/auto 1fr auto;
+    align-items: center;
+}
 
 nav {
     background-color: var(--text-background-color);
@@ -26,23 +45,40 @@ nav a {
 
 }
 
+nav a:hover {
+    color: yellow;
+    text-decoration: none;
+    padding: 20px;
+    font-weight: 545;
+
+}
+
 h1 {
     color: var(--text-background-color);
     margin: 1rem;
     border-bottom: 1px solid darkgray;
 }
 
-main img {
+main h1{
+    grid-column: 1/2;
+}
+
+main section img {
     width: 150px;
     height: auto;
     border: 1px solid var(--shape-border-color);
     padding: 2px;
     box-shadow: 0 0 30px gray;
     float: right;
-    margin: 0 0 1rem 1rem;
+    margin: 0 1rem;
 }
 
-p {
+.card{
+    grid-column: 1/2;
+}
+
+p,
+h2 {
     margin: 1rem;
 
 }
@@ -54,12 +90,12 @@ aside {
 
 }
 
-aside h2 {
+/* aside h2 {
     position: absolute;
     top: 20px;
     left: 50px;
 
-}
+} */
 
 aside img {
     width: 200px;
@@ -88,13 +124,7 @@ footer {
 
 header,
 footer,
-.grid {
+main {
     max-width: 840px;
     margin: 0 auto;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    align-items: center;
 }

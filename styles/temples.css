@@ -32,9 +32,13 @@ h1 {
     content: "❌";
 }
 
-.navigation {
+nav {
     display: flex;
     flex-direction: column;
+}
+
+.navigation {
+
     justify-content: space-between;
     list-style: none;
     margin: 0 auto;

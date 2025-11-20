@@ -1,0 +1,95 @@
+h1 {
+    text-align: left;
+    font-family: times, serif;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+
+/* small view navigation */
+#menu {
+    display: block;
+    font-size: 1.5rem;
+    border: 0;
+    color: #000;
+    text-decoration: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    /*padding: 0.5rem .75rem;*/
+}
+
+#menu::before {
+    content: "☰";
+
+}
+
+#menu.open::before {
+    content: "❌";
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0 auto;
+    background-color: #333;
+    color: #fff;
+}
+
+
+
+.navigation a {
+    display: none;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.navigation a:hover,
+.navigation a:active {
+    background-color: #bbb;
+    color: #333;
+    font-weight: 700;
+    text-align: center;
+    transition: 0.5s;
+
+}
+
+footer {
+    text-align: center;
+
+}
+
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+    display: block;
+}
+
+.mains {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+    gap: 12px;
+    justify-content: center;
+
+}
+
+figure {
+    padding: 0.2rem;
+    margin: 0.25rem;
+    width: 200px;
+}
+
+figcaption {
+    text-align: center;
+    background-color: lightblue;
+}
+
+.mains h1 {
+    grid-column: 1/-1;
+
+}

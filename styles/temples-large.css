@@ -1,12 +1,6 @@
 /* large view navigation ************************************/
 @media (min-width: 37.5em) {
 
-    
-    main {
-        max-width: 840px;
-        margin: 0 auto;
-    }
-
     header {
         display: flex;
         align-items: center;
@@ -37,9 +31,22 @@
         /* hide hamburger button */
     }
 
-    .navigation {
+    nav,
+    nav ul {
+        display: flex;
+
+    }
+
+    nav ul {
         flex-direction: row;
+
         margin-right: 1rem;
+    }
+
+    .navigation li {
+        flex-direction: row;
+        text-decoration: none;
+        color: #fff;
     }
 
     .navigation a {

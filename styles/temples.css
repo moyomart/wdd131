@@ -21,7 +21,7 @@ h1 {
 
 #menu::before {
     content: "☰";
-
+color: white;
 }
 
 #menu.open::before {
@@ -38,6 +38,10 @@ h1 {
     color: #fff;
 }
 
+header h2{
+        background-color: #333;
+            color: #fff;
+}
 
 
 .navigation a {

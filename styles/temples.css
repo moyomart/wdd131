@@ -5,6 +5,10 @@ h1 {
     margin-left: 1rem;
 }
 
+* {
+    font-family: 'Roboto',
+        sans-serif;
+}
 
 /* small view navigation */
 #menu {
@@ -21,7 +25,7 @@ h1 {
 
 #menu::before {
     content: "☰";
-color: white;
+    color: white;
 }
 
 #menu.open::before {
@@ -38,9 +42,9 @@ color: white;
     color: #fff;
 }
 
-header h2{
-        background-color: #333;
-            color: #fff;
+header h2 {
+    background-color: #333;
+    color: #fff;
 }
 
 

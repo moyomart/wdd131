@@ -1,12 +1,10 @@
 /* large view navigation ************************************/
 @media (min-width: 37.5em) {
 
-    nav,
-    header,
-    body,
-    footer {
+    
+    main {
         max-width: 840px;
-        margin: 1rem auto;
+        margin: 0 auto;
     }
 
     header {

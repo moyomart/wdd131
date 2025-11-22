@@ -88,6 +88,8 @@ tr {
 }
 
 
+
+
 /* large view navigation ************************************/
 @media (min-width: 37.5em) {
 
@@ -141,7 +143,7 @@ tr {
         content: "⛅"
     }
 
-    table {     
+    table {
         border-collapse: collapse;
         border: 2px solid rgb(140 140 140);
         letter-spacing: 1px;
@@ -153,6 +155,10 @@ tr {
     tr {
         color: var(--font-color);
         font-weight: 600;
+    }
+
+    #weatherIcon {
+        display: none;
     }
 
 }

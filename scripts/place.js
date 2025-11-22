@@ -7,17 +7,22 @@ document.getElementById("lastModified").textContent = "Last modified: " + docume
 
 //Handling the Weather SVG to display for the specified smaller screen size
 function toggleIcon() {
-    const iconCell = document.getElementById("icon");
-
+    const svg = document.getElementById("weatherIcon");
 
     if (window.innerWidth < 600) {
-        if (!iconCell.querySelector("img")) {
-            iconCell.innerHTML = `<img src="images/cloudy.svg" class="icon">`;
+        if (!svg.hasChildNodes()) {
+            // Load the actual SVG file and inject the paths
+            fetch("images/cloudy.svg")
+                .then(res => res.text())
+                .then(data => {
+                    svg.innerHTML = data;   // inject SVG shapes
+                });
         }
     } else {
-        iconCell.innerHTML = "";
+        svg.innerHTML = "";    // clear
     }
 }
+
 
 // Run at load
 toggleIcon();

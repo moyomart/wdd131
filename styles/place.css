@@ -1,0 +1,143 @@
+h2 {
+    text-align: center;
+    font-family: times, serif;
+    font-size: 1.5rem;
+
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 0.2rem 0;
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+
+}
+
+* {
+    font-family: 'Roboto',
+        sans-serif;
+}
+
+.mains {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 12px;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+
+}
+
+figure {
+    padding: 0.2rem;
+    margin: 0.25rem;
+    width: 200px;
+}
+
+figcaption {
+    text-align: center;
+    background-color: lightblue;
+}
+
+/*Responsive image*/
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero {
+    grid-column: 1/-1;
+}
+
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(140 140 140);
+    letter-spacing: 1px;
+    font-size: clamp(13px, 1.2vw, 16px);
+    width: 100%;
+}
+
+tr {
+    background-color: white;
+    opacity: 0.75;
+}
+
+
+  #icon img {
+      width: 40px;
+      max-width: 350px;
+      display: inline-block;
+      height: auto;
+  }
+
+  #icon{
+    text-align: center;
+  }
+
+
+/* large view navigation ************************************/
+@media (min-width: 37.5em) {
+
+    header {
+        display: block;
+        align-items: center;
+        background-color: #333;
+        text-align: center;
+        padding: 0.2rem 0;
+    }
+
+
+    footer {
+        text-align: center;
+
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-left: 1rem;
+        text-align: left;
+
+    }
+
+    header h2 {
+        color: #fff;
+        justify-items: center;
+    }
+
+    .data {
+        position: absolute;
+        margin-top: 1rem;
+        margin-left: 1rem;
+
+    }
+
+    .weather {
+        position: absolute;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+        bottom: 1rem;
+        right: 1rem;
+
+    }
+
+    .data h3,
+    .weather h3 {
+        background-color: darkred;
+        color: #fff;
+        padding: 0.5rem;
+        position: relative;
+        left: -10px;
+        top: 0;
+        margin: 0;
+    }
+
+    .weather h3::before {
+        content: "⛅"
+    }
+
+}

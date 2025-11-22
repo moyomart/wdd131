@@ -30,9 +30,11 @@ window.onresize = toggleIcon;
 // WIND CHILL CALCULATION
 // ----------------------------
 function calculateWindChill(temp, wind, unit) {
-    return unit === "metric"
-        ? 13.12 + 0.6215 * temp - 11.37 * Math.pow(wind, 0.16) + 0.3965 * temp * Math.pow(wind, 0.16)
-        : 35.74 + 0.6215 * temp - 35.75 * Math.pow(wind, 0.16) + 0.4275 * temp * Math.pow(wind, 0.16);
+    const w16 = Math.pow(wind, 0.16);
+    if (unit === "metric") {
+        return 13.12 + 0.6215 * temp - 11.37 * w16 + 0.3965 * temp * w16;
+    }
+    return 35.74 + 0.6215 * temp - 35.75 * w16 + 0.4275 * temp * w16;
 }
 
 function getWindChillDisplay(temp, wind, unit) {
@@ -45,24 +47,21 @@ function getWindChillDisplay(temp, wind, unit) {
     return calculateWindChill(temp, wind, unit).toFixed(1);
 }
 
-// ----------------------------
-// EXTRACT VALUES FROM TABLE
-// ----------------------------
 function parseWeatherData() {
     const tempCell = document.getElementById("temp").textContent.trim();
     const windCell = document.getElementById("wind").textContent.trim();
 
-    // Parse temperature
     const temp = parseFloat(tempCell);
     const unit = tempCell.includes("°C") ? "metric" : "imperial";
 
-    // Parse wind value (extract the FIRST number)
-    const wind = parseFloat(windCell); // works even for "2–5 mph"
+    const windMatch = windCell.match(/[\d.]+/);
+    if (!windMatch) {
+        document.getElementById("windchill").textContent = "N/A";
+        return;
+    }
 
-    // Calculate and update wind chill
-    const windChillCell = document.getElementById("windchill");
-    windChillCell.textContent = getWindChillDisplay(temp, wind, unit);
+    const wind = parseFloat(windMatch[0]);
+    document.getElementById("windchill").textContent = getWindChillDisplay(temp, wind, unit);
 }
 
-// Run once on page load
 parseWeatherData();

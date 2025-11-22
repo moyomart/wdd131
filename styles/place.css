@@ -84,6 +84,7 @@ tr {
 
 #icon {
     text-align: center;
+
 }
 
 
@@ -136,11 +137,11 @@ tr {
         z-index: 10;
     }
 
-    .heading::after {
+    .weather .heading::after {
         content: "⛅"
     }
 
-    table {
+    table {     
         border-collapse: collapse;
         border: 2px solid rgb(140 140 140);
         letter-spacing: 1px;

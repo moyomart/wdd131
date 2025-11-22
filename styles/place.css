@@ -1,4 +1,10 @@
-h2 {
+:root {
+    line-height: 1.5;
+    --font-color: #fff;
+    --back-color: #333;
+}
+
+h1 {
     text-align: center;
     font-family: times, serif;
     font-size: 1.5rem;
@@ -6,8 +12,8 @@ h2 {
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--back-color);
+    color: var(--font-color);
     padding: 0.2rem 0;
     margin: 0;
 }
@@ -32,17 +38,6 @@ footer {
 
 }
 
-figure {
-    padding: 0.2rem;
-    margin: 0.25rem;
-    width: 200px;
-}
-
-figcaption {
-    text-align: center;
-    background-color: lightblue;
-}
-
 /*Responsive image*/
 .hero img {
     width: 100%;
@@ -53,31 +48,42 @@ figcaption {
     grid-column: 1/-1;
 }
 
-
 table {
-    border-collapse: collapse;
+
+    color: royalblue;
+    border-collapse: separate;
     border: 2px solid rgb(140 140 140);
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     font-size: clamp(13px, 1.2vw, 16px);
     width: 100%;
+    border-spacing: 0.2rem;
+    text-indent: 1rem;
 }
 
 tr {
-    background-color: white;
-    opacity: 0.75;
+
+    font-weight: 500;
 }
 
-
-  #icon img {
-      width: 40px;
-      max-width: 350px;
-      display: inline-block;
-      height: auto;
-  }
-
-  #icon{
+.weather h3,.data h3{
     text-align: center;
-  }
+    background-color: maroon;
+    color: var(--font-color);
+    margin: 0.2rem 0;
+    padding: 0.4rem 0;
+}
+
+#icon img {
+    width: 30%;
+    max-width: 350px;
+    display: inline-block;
+    height: auto;
+   
+}
+
+#icon {
+    text-align: center;
+}
 
 
 /* large view navigation ************************************/
@@ -86,26 +92,19 @@ tr {
     header {
         display: block;
         align-items: center;
-        background-color: #333;
+        background-color: var(--back-color);
         text-align: center;
         padding: 0.2rem 0;
     }
-
 
     footer {
         text-align: center;
 
     }
 
-    h1 {
-        font-size: 2.5rem;
-        margin-left: 1rem;
-        text-align: left;
 
-    }
-
-    header h2 {
-        color: #fff;
+    header h1 {
+        color: var(--font-color);
         justify-items: center;
     }
 
@@ -128,16 +127,31 @@ tr {
     .data h3,
     .weather h3 {
         background-color: darkred;
-        color: #fff;
+        color: var(--font-color);
         padding: 0.5rem;
         position: relative;
         left: -10px;
         top: 0;
         margin: 0;
+        z-index: 10;
     }
 
     .weather h3::before {
         content: "⛅"
+    }
+
+    table {
+        border-collapse: collapse;
+        border: 2px solid rgb(140 140 140);
+        letter-spacing: 1px;
+        font-size: clamp(13px, 1.2vw, 16px);
+        width: 100%;
+        background-color: rgba(110, 110, 110, 0.8)
+    }
+
+    tr {
+        color: var(--font-color);
+        font-weight: 600;
     }
 
 }

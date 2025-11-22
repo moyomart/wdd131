@@ -58,6 +58,7 @@ table {
     width: 100%;
     border-spacing: 0.2rem;
     text-indent: 1rem;
+
 }
 
 tr {
@@ -65,7 +66,7 @@ tr {
     font-weight: 500;
 }
 
-.weather h3,.data h3{
+.heading {
     text-align: center;
     background-color: maroon;
     color: var(--font-color);
@@ -78,7 +79,7 @@ tr {
     max-width: 350px;
     display: inline-block;
     height: auto;
-   
+
 }
 
 #icon {
@@ -124,8 +125,7 @@ tr {
 
     }
 
-    .data h3,
-    .weather h3 {
+    .heading {
         background-color: darkred;
         color: var(--font-color);
         padding: 0.5rem;
@@ -136,7 +136,7 @@ tr {
         z-index: 10;
     }
 
-    .weather h3::before {
+    .heading::after {
         content: "⛅"
     }
 

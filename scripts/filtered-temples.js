@@ -99,20 +99,47 @@ const temples = [
 
 //loop through the images
 
-function renderTemples() {
+function renderTemples(filteredTemples) {
     const container = document.querySelector(".mains");
-    container.innerHTML = temples.map(temple => `
+    container.innerHTML = filteredTemples.map(filteredTemples => `
     <div class="card">
-        <h3>${temple.templeName}</h3>
+        <h3>${filteredTemples.templeName}</h3>
 
-      <p><span>Location: ${temple.location}</span></p>
-      <p><span>Dedicated: ${temple.dedicated}</span></p>
-      <p><span>Size: ${temple.area} sq ft</span></p>
+      <p><span>Location: ${filteredTemples.location}</span></p>
+      <p><span>Dedicated: ${filteredTemples.dedicated}</span></p>
+      <p><span>Size: ${filteredTemples.area} sq ft</span></p>
       
-      <img src="${temple.imageUrl}" alt="An image of ${temple.templeName}"  loading="lazy"</td>
+      <img src="${filteredTemples.imageUrl}" alt="An image of ${filteredTemples.templeName}"  loading="lazy"</td>
     </div>`).join("");
 
 }
 
+const hmeTemples = document.querySelector("#hme");
+const oldTemples = document.querySelector("#old");
+const newTemples = document.querySelector("#new");
+const lrgTemples = document.querySelector("#lrg");
+const smlTemples = document.querySelector("#sml");
 
-renderTemples();
+//Home - all temples
+hmeTemples.addEventListener("click", () => {
+    renderTemples(temples);
+})
+//old temples
+oldTemples.addEventListener("click", () => {
+    renderTemples(temples.filter(temple => (new Date(temple.dedicated)).getFullYear() < 1900));
+})
+//new temples
+newTemples.addEventListener("click", () => {
+    renderTemples(temples.filter(temple => (new Date(temple.dedicated)).getFullYear() > 2000));
+})
+//large temples
+lrgTemples.addEventListener("click", () => {
+    renderTemples(temples.filter(temple => temple.area > 90000));
+})
+
+//small temples
+smlTemples.addEventListener("click", () => {
+    renderTemples(temples.filter(temple => temple.area < 10000));
+})
+
+renderTemples(temples);

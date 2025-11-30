@@ -1,0 +1,141 @@
+h1 {
+    text-align: left;
+    font-family: times, serif;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+* {
+    font-family: 'Roboto',
+        sans-serif;
+}
+
+/* small view navigation */
+#menu {
+    display: block;
+    font-size: 1.5rem;
+    border: 0;
+    color: #000;
+    text-decoration: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    /*padding: 0.5rem .75rem;*/
+}
+
+#menu::before {
+    content: "☰";
+    color: white;
+}
+
+#menu.open::before {
+    content: "❌";
+}
+
+
+
+
+header h2 {
+    background-color: #333;
+    color: #fff;
+    padding-left: 1rem;
+
+}
+
+nav ul {
+    padding: 0;
+}
+
+.navigation li {
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0 auto;
+    background-color: #333;
+    color: #fff;
+}
+
+.navigation a {
+    display: none;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.navigation a:hover,
+.navigation a:active {
+    background-color: #bbb;
+    color: #333;
+    font-weight: 700;
+    text-align: center;
+    transition: 0.5s;
+
+}
+
+footer {
+    text-align: center;
+
+}
+
+main {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+    display: block;
+}
+
+.mains {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+    gap: 0.2rem;
+    justify-content: center;
+
+}
+
+
+
+figcaption {
+    text-align: center;
+    background-color: lightblue;
+}
+
+.mains h1 {
+    grid-column: 1/-1;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0.3rem;
+    margin-top: 0.3rem;
+    border: 1px solid #bbb;
+    text-align: center;
+    background-color: #fff8e6;
+}
+
+.card img {
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    height: 200px;
+    object-fit: cover;
+    margin-top: auto;
+}
+
+.card h3 {
+    margin: 0.6rem 0.2rem;
+}
+
+.card p span {
+    font-size: 0.9rem;
+
+}
+
+.card p {
+    margin: 0.2rem 0.5rem;
+}

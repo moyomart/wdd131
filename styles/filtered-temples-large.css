@@ -1,0 +1,58 @@
+/* large view navigation ************************************/
+@media (min-width: 37.5em) {
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #333;
+    }
+
+
+    footer {
+        text-align: center;
+
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-left: 1rem;
+        text-align: left;
+
+    }
+
+    header h2 {
+        color: #fff;
+        margin-left: 1rem;
+    }
+
+    #menu {
+        display: none;
+        /* hide hamburger button */
+    }
+
+    nav,
+    nav ul {
+        display: flex;
+
+    }
+
+    nav ul {
+        flex-direction: row;
+
+        margin-right: 1rem;
+    }
+
+    .navigation li {
+        flex-direction: row;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .navigation a {
+        display: block;
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+}

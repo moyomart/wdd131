@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-background-color: black;
+    --shape-border-color: yellow;
+    --color-texts: yellow;
+}
+
+
+
+
+p,
+h2,
+h3 {
+    margin: 1rem 0rem;
+    text-align: justify;
+
+
+}
+
+h2,
+h3 {
+    background-color: var(--text-background-color);
+    color: var(--color-texts);
+    padding: 0.5rem 0.2rem;
+    margin-left: 0;
+}
+
+
+main {
+    border: 2px solid var(--shape-border-color);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+
+
+footer {
+    margin-top: 10px;
+    border-top: 1px dashed var(--shape-border-color);
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+header,
+footer,
+main {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+footer p {
+    text-align: center;
+}

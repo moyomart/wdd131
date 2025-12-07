@@ -16,6 +16,7 @@ h1 {
     color: #445ba9;
     font-size: .9rem;
     /* padding: 0 .2rem; */
+    margin: 1rem 0 0.2rem 0;
 }
 
 .wf1 label {
@@ -46,6 +47,11 @@ h1 {
     max-width: 400px;
     /* appearance: none; */
     /*This removes any default styling from the browser */
+}
+
+.wf1 .para{
+    margin-top: 0;
+    font-style: italic;
 }
 
 

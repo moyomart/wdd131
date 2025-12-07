@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>WDD 131 - Place or Country Task - Martin Moyo</title>
+    <meta name="description" content="Course WDD131 - responsive product review form ">
+    <meta name="author" content="Martin Moyo">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html" class="wf1">
+            <fieldset>
+                <label id="prod-label">Product Name
+                    <select name="product" id="prod-select" required>
+                        <option value="" disabled selected>Select a Product ... </option>
+
+                    </select>
+                </label>
+
+
+
+                <label id="app-label">Applicant Information</label>
+                <label><input type="radio" id="1-star" name="rating" required>⭐</label>
+                <label><input type="radio" id="2-star" name="rating" required>⭐⭐</label>
+                <label><input type="radio" id="3-star" name="rating" required>⭐⭐⭐</label>
+                <label><input type="radio" id="4-star" name="rating" required>⭐⭐⭐⭐</label>
+                <label><input type="radio" id="5-star" name="rating" required>⭐⭐⭐⭐⭐</label>
+
+
+                <label id="date-label">Date of Installation <input type="date" id="install-date" name="installDate"
+                        required></label>
+
+                <p>Which of the features did you find useful in the product?</p>
+                <p>(Check all that apply)</p>
+                <label><input type="checkbox" id="design-box" name="design" value="yes">Design</label>
+                <label><input type="checkbox" id="durable-box" name="durable" value="yes">Durability</label>
+                <label><input type="checkbox" id="easy-box" name="easy" value="yes">Ease of Use</label>
+                <label><input type="checkbox" id="perfom-box" name="perform" value="yes">Performance</label>
+
+
+
+                <label id="write-label">Written Review (Optional)<textarea id="text-box"
+                        name="freeform"></textarea></label>
+                <label id="name-label">Your Name (Optional)<input type="text" id="name-box" name="namespace"></label>
+
+
+            </fieldset>
+
+            <input type="submit" value="Post Review">
+        </form>
+
+
+    </main>
+
+
+    <footer>
+        <p>
+            &copy;
+            <span id="currentyear"></span>
+            &#10070; Martin Moyo &#10070;
+            Scotland, United Kingdom
+        </p>
+        <p id="lastModified">
+
+        </p>
+    </footer>
+
+</body>
+
+</html>

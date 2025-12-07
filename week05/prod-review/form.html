@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>WDD 131 - Place or Country Task - Martin Moyo</title>
-    <meta name="description" content="Course WDD131 - responsive product review form ">
+    <meta name="description" content="Course WDD131 - Creating a responsive product review form ">
     <meta name="author" content="Martin Moyo">
     <link rel="stylesheet" href="styles/form.css">
     <script src="scripts/form.js" defer></script>
@@ -34,11 +34,11 @@
 
 
                 <label id="app-label">Applicant Information</label>
-                <label><input type="radio" id="1-star" name="rating" required>⭐</label>
-                <label><input type="radio" id="2-star" name="rating" required>⭐⭐</label>
-                <label><input type="radio" id="3-star" name="rating" required>⭐⭐⭐</label>
-                <label><input type="radio" id="4-star" name="rating" required>⭐⭐⭐⭐</label>
-                <label><input type="radio" id="5-star" name="rating" required>⭐⭐⭐⭐⭐</label>
+                <label for="1-star"><input type="radio" id="1-star" name="rating" value="⭐" required>⭐</label>
+                <label for="2-star"><input type="radio" id="2-star" name="rating" value="⭐⭐" required>⭐⭐</label>
+                <label for="3-star"><input type="radio" id="3-star" name="rating" value="⭐⭐⭐" required>⭐⭐⭐</label>
+                <label for="4-star"><input type="radio" id="4-star" name="rating" value="⭐⭐⭐⭐" required>⭐⭐⭐⭐</label>
+                <label for="5-star"><input type="radio" id="5-star" name="rating" value="⭐⭐⭐⭐" required>⭐⭐⭐⭐⭐</label>
 
 
                 <label id="date-label">Date of Installation <input type="date" id="install-date" name="installDate"
@@ -46,10 +46,12 @@
 
                 <p>Which of the features did you find useful in the product?</p>
                 <p>(Check all that apply)</p>
-                <label><input type="checkbox" id="design-box" name="design" value="yes">Design</label>
-                <label><input type="checkbox" id="durable-box" name="durable" value="yes">Durability</label>
-                <label><input type="checkbox" id="easy-box" name="easy" value="yes">Ease of Use</label>
-                <label><input type="checkbox" id="perfom-box" name="perform" value="yes">Performance</label>
+                <label for="design-box"><input type="checkbox" id="design-box" name="design" value="yes">Design</label>
+                <label for="durable"><input type="checkbox" id="durable-box" name="durable"
+                        value="yes">Durability</label>
+                <label for="easy-box"><input type="checkbox" id="easy-box" name="easy" value="yes">Ease of Use</label>
+                <label for="perform"><input type="checkbox" id="perfom-box" name="perform"
+                        value="yes">Performance</label>
 
 
 

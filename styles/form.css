@@ -98,12 +98,19 @@ footer {
 
 /* Styling of Review.html */
 
-.label{
+.label {
     font-weight: 700;
 }
 
-#reviews{
+#reviews {
     color: navy;
     font-weight: bolder;
     font-size: larger;
+}
+
+@media (min-width: 37.5em) {
+    .wf1 {
+        max-width: 700px;
+        margin: auto;
+    }
 }

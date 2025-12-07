@@ -75,7 +75,7 @@ h1 {
     width: 96%;
     max-width: 400px;
     margin: -1rem 2% 2rem 2%;
-    box-shadow: 1px 1xp 4px #999;
+    box-shadow: 1px 1px 4px #999;
 }
 
 .wf1 input:required,
@@ -98,12 +98,31 @@ footer {
 
 /* Styling of Review.html */
 
-.label{
+.label {
     font-weight: 700;
 }
 
-#reviews{
+#reviews {
     color: navy;
     font-weight: bolder;
     font-size: larger;
+}
+
+@media (min-width: 37.5em) {
+    .wf1 {
+        max-width: 700px;
+        margin: auto;
+    }
+
+    .wf1 input[type="submit"] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+
+    }
+
+    .wf1 fieldset {
+        margin: 2rem 0 1rem 0;
+    }
 }

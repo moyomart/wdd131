@@ -1,0 +1,393 @@
+:root {
+    --background-primary-color: #E9CD10;
+    --font-primary-color: #141319;
+    --font-next-color: #ffffff;
+    --highlight-color: #C2C5C8;
+    --other-background: #383D45;
+    --other-opacity-background: #383D4599;
+    --gradient-form-color: #C68A00;
+    --button-grad-1: #9c2c13;
+    --button-grad-2: #6f200e;
+}
+
+* {
+    font-family: 'Roboto',
+        sans-serif;
+
+}
+
+h1 {
+    text-align: left;
+    font-family: times, serif;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+
+/* small view navigation */
+#menu {
+    display: block;
+    font-size: 1.5rem;
+    border: 0;
+    color: var(--font-primary-color);
+    text-decoration: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    /*padding: 0.5rem .75rem;*/
+}
+
+#menu::before {
+    content: "☰";
+    color: var(--font-primary-color);
+}
+
+#menu.open::before {
+    content: "❌";
+
+}
+
+
+
+
+header h2 {
+    background-color: var(--font-primary-color);
+    color: var(--font-next-color);
+    padding-left: 1rem;
+
+}
+
+nav ul {
+    padding: 0;
+}
+
+.navigation li {
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0 auto;
+    background-color: var(--background-primary-color);
+    color: var(--other-background);
+}
+
+.navigation a {
+    display: none;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--font-primary-color);
+
+}
+
+.navigation a:hover,
+.navigation a:active {
+    background-color: var(--highlight-color);
+    color: var(--other-background);
+    font-weight: 700;
+    text-align: center;
+    transition: 0.5s;
+
+}
+
+
+
+footer {
+    text-align: center;
+
+}
+
+main {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+    display: block;
+}
+
+.mains {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0.2rem;
+    justify-content: center;
+
+}
+
+.branding {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.branding img {
+    height: 45px;
+    width: auto;
+    margin-left: 5px;
+    border: 1px solid var(--other-background)
+}
+
+
+
+figcaption {
+    text-align: center;
+
+}
+
+.mains h1 {
+    grid-column: 1/-1;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0.3rem;
+    margin: 1rem auto;
+    border: 1px solid var(--gradient-form-color);
+    text-align: center;
+    background-color: var(--highlight-color);
+
+}
+
+/* .card img {
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    height: 200px;
+    object-fit: cover;
+    margin-top: auto;
+} */
+
+.card h3 {
+    margin: 0.6rem 0.2rem;
+}
+
+.card p span {
+    font-size: 0.9rem;
+
+}
+
+.card p {
+    margin: 0.2rem 0.5rem;
+}
+
+.card video {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+
+
+/* STYLING OF FORM */
+
+.wf1 fieldset {
+    margin: 2rem 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: .5rem 2%;
+}
+
+.wf1 p {
+    color: #445ba9;
+    font-size: .9rem;
+    /* padding: 0 .2rem; */
+}
+
+.wf1 label {
+    display: block;
+    padding-top: 0.2rem;
+    color: var(--);
+    font-size: .9rem;
+}
+
+.wf1 div {
+    padding-top: 1rem;
+    color: #445ba9;
+    font-size: .9rem;
+}
+
+
+.wf1 input[type="date"],
+.wf1 input[type="text"],
+.wf1 input[type="email"],
+.wf1 textarea {
+    background-color: #eee;
+    display: block;
+    border: 1px solid #999;
+    border-radius: 6px;
+    padding: .75rem;
+    color: var(--other-background);
+    width: 92%;
+    max-width: 400px;
+    /* appearance: none; */
+    /*This removes any default styling from the browser */
+}
+
+.wf1 input[type="tel"],
+.wf1 select {
+    width: 94%;
+    background-color: #eee;
+    display: block;
+    border: 1px solid #999;
+    border-radius: 6px;
+    padding: .75rem;
+    color: var(--other-background);
+    max-width: 400px;
+}
+
+
+#prod-label,
+#app-label,
+#date-label,
+#write-label,
+#name-label {
+    margin-top: 0.5rem;
+}
+
+#text-box {
+    height: 100px;
+}
+
+.wf1 input[type="radio"],
+.wf1 input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+.wf1 input[type="submit"] {
+    border: none;
+    background-image: linear-gradient(var(--button-grad-1), var(--button-grad-2));
+    color: #fff;
+    padding: .8rem;
+    border-radius: 6px;
+    width: 96%;
+    max-width: 200px;
+    margin: -1rem 2% 2rem 2%;
+    box-shadow: 1px 1xp 4px #999;
+}
+
+.wf1 {
+    background-image: linear-gradient(to right, var(--background-primary-color), var(--gradient-form-color));
+    padding: 0.4rem;
+    border-radius: 10px;
+}
+
+.wf1 input:required,
+.wf1 select:required {
+    border-left: solid 8px red;
+}
+
+.wf1 input:required:valid,
+.wf1 select:required:valid {
+    border-left: solid 8px green;
+}
+
+
+@media (min-width: 37.5em) {
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--background-primary-color);
+    }
+
+
+    footer {
+        text-align: center;
+
+    }
+
+    h1 {
+        font-size: 2.0rem;
+        margin-left: 0.5rem;
+        text-align: left;
+
+    }
+
+    header h1 {
+        color: var(--font-primary-color);
+        margin-left: 1rem;
+    }
+
+    #menu {
+        display: none;
+        /* hide hamburger button */
+    }
+
+    #enrollbtn {
+        padding: 1rem;
+    }
+
+    .branding {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        margin-right: 1rem;
+    }
+
+    nav,
+    nav ul {
+        display: flex;
+
+    }
+
+    nav ul {
+        flex-direction: row;
+
+        margin-right: 1rem;
+    }
+
+    .navigation li {
+        flex-direction: row;
+        text-decoration: none;
+        color: var(--font-primary-color);
+    }
+
+    .navigation a {
+        display: block;
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+
+    .card {
+        margin-left: 1rem auto 0 1rem;
+        max-width: none;
+
+    }
+
+    .card video {
+        width: 100%;
+        height: 260px;
+        max-width: 400px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+
+    .parastory {
+        padding: 0 1rem 0;
+        max-width: 400px;
+        text-align: center;
+        margin: 2%;
+        border: 1px solid var(--gradient-form-color)
+    }
+
+    .parastory p {
+        text-align: justify;
+    }
+
+    /*Form styling*/
+
+    .wf1 {
+        max-width: 400px;
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+
+
+}

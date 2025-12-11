@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Software Development Cookbook platform - Martin Moyo</title>
+    <meta name="description" content="One stop destination for Learning Software Development at all levels">
+    <meta name="author" content="Martin Moyo">
+    <link rel="stylesheet" href="#">
+    <link rel="stylesheet" href="styles/devcbook.css">
+    <script src="scripts/devcbk.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="branding">
+            <img src="images/softwareDevsLogo.png" alt="Software Dev Cookbook Logo" class="logo">
+            <h1>Software Dev Cookbook</h1>
+        </div>
+        <a id="menu" href="#"></a>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#" title="Home" id="hme">Home</a></li>
+                <li><a href="#" title="AboutUs" id="about-us">About Us</a></li>
+                <li><a href="#" title="Resources" id="resource">Resources</a></li>
+                <li><a href="#" title="Login" id="log-in">Login</a></li>
+                <li>
+                    <button id="enrollbtn">Enroll</button>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+    <main>
+        <div class="mains">
+
+            <section class="parastory">
+                <h2>The Software Development Cookbook:
+                </h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis ratione accusantium alias dolores,
+                    adipisci
+                    ipsam quasi ducimus dolorem in sunt fugiat nesciunt enim perferendis, iusto corrupti assumenda
+                    aliquam optio?
+                    Reiciendis?</p>
+
+            </section>
+        </div>
+
+
+        <!-- Sign Up Form -->
+        <form method="get" action="thanks.html" class="wf1">
+            <fieldset>
+                <legend>Applicant Information</legend>
+                <label>First Name* <input type="text" name="fname" required></label>
+                <label>Last Name* <input type="text" name="lname" required></label>
+                <label>Phone <input type="tel" name="phone" placeholder="1235551234"></label>
+                <label>Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
+
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Course Information</legend>
+                <div>Experience</div>
+                <label><input type="radio" name="audience" value="beginner">Beginner</label>
+                <label><input type="radio" name="audience" value="intermediate">Intermediate</label>
+                <label><input type="radio" name="audience" value="advanced">Advanced</label>
+
+                <div>Training Needed</div>
+                <label><input type="checkbox" name="code" value="yes">Coding</label>
+                <label><input type="checkbox" name="dbdev" value="yes">Database Development</label>
+                <label><input type="checkbox" name="modelling" value="yes">Modelling Portfolio</label>
+                <label><input type="checkbox" name="wedbev" value="yes">Web Development</label>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Funding</legend>
+                <label>Anticipated Completion Date <input type="date" name="completeDate"></label>
+                <label>Course Subject
+                    <select name="subject">
+                        <option value="">Please Select &#9662;</option>
+                        <option value="business">Business Professional</option>
+                        <option value="construction">Construction</option>
+                        <option value="creative">Creative Professional</option>
+                        <option value="security">Cyber Security</option>
+                        <option value="data">Data Professional</option>
+                        <option value="info">Information Technology</option>
+                        <option value="manufacturing">Manufacturing</option>
+                        <option value="software">Software Development</option>
+                    </select>
+                </label>
+
+            </fieldset>
+
+            <input type="submit" value="Propose My Course">
+        </form>
+
+
+    </main>
+    <footer>
+        <p>
+            &copy;
+            <span id="currentyear"></span>
+            &#10070; Software Devs Cookbook &#10070;
+            Scotland, United Kingdom &#10070;
+        </p>
+        <p id="lastModified">
+
+        </p>
+    </footer>
+
+</body>
+
+</html>

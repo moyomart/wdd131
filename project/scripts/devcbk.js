@@ -42,9 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <section class="parastory">
             <h2>The Software Development Cookbook:
             </h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis ratione accusantium alias dolores, adipisci
-                ipsam quasi ducimus dolorem in sunt fugiat nesciunt enim perferendis, iusto corrupti assumenda aliquam optio?
-                Reiciendis?</p>
+            <p>The Software Dev Cookbook is designed to be your central guide to learning software development. Whether you're exploring code for the first time or expanding existing skills, we curate clear explanations, structured learning paths, and carefully selected external resources - all in one place. <br>Start on your journey of discovery, backed by resources trusted in the tech and software industry. </p>
         
         </section>`).join("");
 
@@ -78,26 +76,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //getting stored value in localStorage
-let numReviews = Number(localStorage.getItem("reviews-ls")) || 0;
+let numapplns = Number(localStorage.getItem("applns-ls")) || 0;
 
 //initialize display element
-const reviewsDisplay = document.querySelector(".reviews");
+const applnsDisplay = document.querySelector(".applns");
 
-if (reviewsDisplay) {
+if (applnsDisplay) {
 
-    //increment the number of reviews -- this will allow my counter to move to 2 after printing the first comment
-    numReviews++;
+    //increment the number of applns -- this will allow my counter to move to 2 after printing the first comment
+    numapplns++;
 
-    if (numReviews !== 1) {
-        reviewsDisplay.textContent = numReviews;
+    if (numapplns !== 1) {
+        applnsDisplay.textContent = numapplns;
     } else {
-        reviewsDisplay.textContent = "This is the first review!";
+        applnsDisplay.textContent = "This is the first application!";
     };
 
 
 
-    //store the new number of reviews
-    localStorage.setItem("reviews-ls", numReviews);
+    //store the new number of applns
+    localStorage.setItem("applns-ls", numapplns);
 };
 
 

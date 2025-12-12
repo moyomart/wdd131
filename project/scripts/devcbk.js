@@ -16,7 +16,29 @@ document.addEventListener("DOMContentLoaded", () => {
         hamButton.classList.toggle('open');
     });
 
-    const temples = [
+
+    //close the login popup
+
+    const loginBtn = document.getElementById("loginbtn");
+    const authPopup = document.getElementById("authform");
+    const closeBtn = document.getElementById("closeAuthError");
+
+
+    if (loginBtn) {
+        loginBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            authPopup.style.display = "flex";
+        });
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener("click", () => {
+            authPopup.style.display = "none";
+        });
+    }
+
+
+    const vidpage = [
         {
             Name: "Welcome Video",
             description: "Master software development on One Powerful Platform",
@@ -27,16 +49,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //loop through the images
 
-    function renderTemples(vids) {
-        const container = document.querySelector(".mains");
-        container.innerHTML = vids.map(vids => `
-        <div class="card">
-            <h3>${vids.Name}</h3>
 
-            <p><span>${vids.description}</span></p>
+    function renderVids(vids) {
+        const container = document.querySelector(".mains");
+        container.innerHTML = vids.map(vid => `
+        <div class="card">
+            <h3>${vid.Name}</h3>
+
+            <p><span>${vid.description}</span></p>
        
             <video controls preload="auto">
-            <source src=${vids.src} type="video/mp4">
+            <source src=${vid.src} type="video/mp4">
             </video>
             </div>
                     <section class="parastory">
@@ -48,106 +71,93 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    renderTemples(temples);
 
-    const hmeTemples = document.querySelector("#hme");
-    const oldTemples = document.querySelector("#old");
-    const newTemples = document.querySelector("#new");
-
-
-    //Home - all temples
-    hmeTemples.addEventListener("click", () => {
-        renderTemples(temples);
-    })
-    //old temples
-    oldTemples.addEventListener("click", () => {
-        renderTemples(temples.filter(temple => (new Date(temple.dedicated)).getFullYear() < 1900));
-    })
-    //new temples
-    newTemples.addEventListener("click", () => {
-        renderTemples(temples.filter(temple => (new Date(temple.dedicated)).getFullYear() > 2000));
-    })
+    renderVids(vidpage);
 
 
 
+    //getting stored value in localStorage
+    let numapplns = Number(localStorage.getItem("applns-ls")) || 0;
 
-});
+    //initialize display element
+    const applnsDisplay = document.querySelector(".applns");
+
+    if (applnsDisplay) {
+
+        //increment the number of applns -- this will allow my counter to move to 2 after printing the first comment
+        numapplns++;
+
+        if (numapplns !== 1) {
+            applnsDisplay.textContent = numapplns;
+        } else {
+            applnsDisplay.textContent = "This is the first application!";
+        };
 
 
 
-//getting stored value in localStorage
-let numapplns = Number(localStorage.getItem("applns-ls")) || 0;
-
-//initialize display element
-const applnsDisplay = document.querySelector(".applns");
-
-if (applnsDisplay) {
-
-    //increment the number of applns -- this will allow my counter to move to 2 after printing the first comment
-    numapplns++;
-
-    if (numapplns !== 1) {
-        applnsDisplay.textContent = numapplns;
-    } else {
-        applnsDisplay.textContent = "This is the first application!";
+        //store the new number of applns
+        localStorage.setItem("applns-ls", numapplns);
     };
 
 
 
-    //store the new number of applns
-    localStorage.setItem("applns-ls", numapplns);
-};
+
+
+    //Products
+    const products = [
+        {
+            id: "fc-1888",
+            name: "Python Programming",
+
+        },
+        {
+            id: "fc-2050",
+            name: "SQL Programming",
+
+        },
+        {
+            id: "fs-1987",
+            name: "Front End Web Dev",
+
+        },
+        {
+            id: "ac-2000",
+            name: "Back End Web Dev",
+
+        },
+        {
+            id: "jj-1969",
+            name: "PowerBI Development",
+
+        }
+    ];
+
+    //loop through the products
+
+
+    function renderProducts(productlist) {
+        const container = document.querySelector("#prod-select");
+        container.innerHTML =
+            `<option value="" disabled selected>Select a Product ... </option>` +
+            productlist.map(p =>
+                `<option value="${p.name}"> ${p.name}</option>`).join("");
+
+    };
+
+    const SelectedProduct = document.getElementById("prod-select");
+
+    //All Products selection
+    SelectedProduct.addEventListener("change", (e) => {
+        console.log("Selected:", e.target.value);
+    });
+
+
+
+    renderProducts(products);
 
 
 
 
 
-//Products
-const products = [
-    {
-        id: "fc-1888",
-        name: "Python Programming",
 
-    },
-    {
-        id: "fc-2050",
-        name: "SQL Programming",
-
-    },
-    {
-        id: "fs-1987",
-        name: "Front End Web Dev",
-
-    },
-    {
-        id: "ac-2000",
-        name: "Back End Web Dev",
-
-    },
-    {
-        id: "jj-1969",
-        name: "PowerBI Development",
-
-    }
-];
-
-//loop through the products
-
-function renderProducts(productlist) {
-    const container = document.querySelector("#prod-select");
-    container.innerHTML =
-        `<option value="" disabled selected>Select a Product ... </option>` +
-        productlist.map(p =>
-            `<option value="${p.name}"> ${p.name}</option>`).join("");
-
-};
-
-renderProducts(products);
-
-const SelectedProduct = document.getElementById("prod-select");
-
-//All Products selection
-SelectedProduct.addEventListener("change", (e) => {
-    console.log("Selected:", e.target.value);
 });
-

@@ -8,6 +8,8 @@
     --gradient-form-color: #C68A00;
     --button-grad-1: #9c2c13;
     --button-grad-2: #6f200e;
+    --correct-form-fill: green;
+    --button-hover-color: #999;
 }
 
 * {
@@ -175,13 +177,16 @@ figcaption {
     border-radius: 10px;
 }
 
+.login-form-area {
+    padding-top: 2%;
+}
 
 
 /* STYLING OF FORM */
 
 .wf1 fieldset {
     margin: 2rem 0;
-    border: 1px solid #ddd;
+    border: 1px solid var(--button-hover-color);
     border-radius: 6px;
     padding: .5rem 2%;
 }
@@ -201,7 +206,6 @@ figcaption {
 
 .wf1 div {
     padding-top: 1rem;
-    color: #445ba9;
     font-size: .9rem;
 }
 
@@ -209,10 +213,11 @@ figcaption {
 .wf1 input[type="date"],
 .wf1 input[type="text"],
 .wf1 input[type="email"],
+.wf1 input[type="password"],
 .wf1 textarea {
-    background-color: #eee;
+    background-color: var(--font-next-color);
     display: block;
-    border: 1px solid #999;
+    border: 1px solid var(--button-hover-color);
     border-radius: 6px;
     padding: .75rem;
     color: var(--other-background);
@@ -225,9 +230,9 @@ figcaption {
 .wf1 input[type="tel"],
 .wf1 select {
     width: 94%;
-    background-color: #eee;
+    background-color: var(--font-next-color);
     display: block;
-    border: 1px solid #999;
+    border: 1px solid var(--button-hover-color);
     border-radius: 6px;
     padding: .75rem;
     color: var(--other-background);
@@ -255,13 +260,13 @@ figcaption {
 .wf1 input[type="submit"] {
     border: none;
     background-image: linear-gradient(var(--button-grad-1), var(--button-grad-2));
-    color: #fff;
+    color: var(--font-next-color);
     padding: .8rem;
     border-radius: 6px;
     width: 96%;
     max-width: 200px;
     margin: -1rem 2% 2rem 2%;
-    box-shadow: 1px 1xp 4px #999;
+    box-shadow: 1px 1xp 4px var(--button-hover-color);
 }
 
 .wf1 {
@@ -272,25 +277,23 @@ figcaption {
 
 .wf1 input:required,
 .wf1 select:required {
-    border-left: solid 8px red;
+    border-left: solid 8px var(--button-grad-1);
 }
 
 .wf1 input:required:valid,
 .wf1 select:required:valid {
-    border-left: solid 8px green;
+    border-left: solid 8px var(--correct-form-fill);
 }
 
 .alumni {
-    max-width: 1000px;
     margin: 20px auto;
     padding: 10px;
-    font-family: Arial, sans-serif;
 }
 
 .gallery-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 15px;
+    gap: 5px;
 }
 
 .gallery-large img,
@@ -298,14 +301,13 @@ figcaption {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    background: #e0e0e0;
-    border-radius: 6px;
+    border-radius: 4px;
 }
 
 .gallery-small-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 10px;
 }
 
 #enrollbtn {
@@ -313,6 +315,40 @@ figcaption {
     border-radius: 10px;
     background-color: var(--button-grad-1);
     color: var(--font-next-color);
+}
+
+.resource-guide li {
+    margin-top: 1rem;
+}
+
+.resource-guide li:hover {
+    color: var(--button-grad-1);
+    cursor: pointer;
+
+}
+
+.popup-auth {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-detail {
+    background: var(--font-next-color);
+    padding: 20px 25px;
+    width: 90%;
+    max-width: 350px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.closebtn {
+    float: right;
+    cursor: pointer;
 }
 
 
@@ -354,6 +390,12 @@ figcaption {
         background-color: var(--button-grad-1);
         color: var(--font-next-color);
     }
+
+    #enrollbtn:hover {
+        background-color: lightgray;
+        color: black;
+    }
+
 
     .branding {
         display: flex;
@@ -426,6 +468,16 @@ figcaption {
 
     .alumni {
         padding: 0 1rem;
+    }
+
+    .popup-detail {
+
+        max-width: 380px;
+        padding: 2rem;
+    }
+
+    .closebtn {
+        font-size: 1.75rem;
     }
 
 

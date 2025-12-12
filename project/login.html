@@ -1,23 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Software Development Cookbook platform - Martin Moyo</title>
-    <meta name="description" content="Thank you page - One stop destination for Learning Software Development at all levels">
+    <meta name="description" content="One stop destination for Learning Software Development at all levels">
     <meta name="author" content="Martin Moyo">
+    <link rel="stylesheet" href="#">
     <link rel="stylesheet" href="styles/devcbook.css">
-    <script src="scripts/devcbk.js" defer></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 </head>
-<body>
-<!-- HEADER HERE -->
 
-    
-<!-- NAVIGATION HERE -->
+<body>
     <header>
         <div class="branding">
             <img src="images/softwareDevsLogo.png" alt="Software Dev Cookbook Logo" class="logo">
@@ -32,24 +31,37 @@
                 <li><a href="login.html" title="Login" id="log-in">Login</a></li>
                 <li><a href="#" title="enrolbtn" id="enrollbtn">Enroll</a></li>
             </ul>
-    
+
         </nav>
     </header>
-    
-    
-<!-- CONTENT HERE -->
-<main>
-    <h1>Course Application:</h1>
-        <p>Thanks for applying join us on this Software Development Journey. We will get in touch with you within a week with more details.</p>
+    <main>
+        <!-- Login Form -->
+        <div class="login-form-area">
+            <form class="wf1">
+                <fieldset>
+                    <legend>User Login</legend>
+                    <label>Email* <input type="email" name="email" placeholder="someone@gmail.com" required
+                            autocomplete="email"></label>
+                    <label>Password* <input type="password" name="paswrd" required
+                            autocomplete="current-password"></label>
 
-            <p><span class="label">Number of Applications: </span>
-                <span class="applns"></span>
-            </p>
-          
-        
+                </fieldset>
+
+                <input id="loginbtn" type="submit" value="Log in">
+            </form>
+
+            <div id="authform" class="popup-auth">
+                <div class="popup-detail">
+                    <span class="closebtn" id="closeAuthError">❌
+                    </span>
+                    <h3>Failed to Authenticate User Credentials</h3>
+                    <p>Please check your email and password and try again.</p>
+                </div>
+
+            </div>
+
+
     </main>
-    
-<!-- FOOTER HERE -->   
     <footer>
         <p>
             &copy;
@@ -58,9 +70,11 @@
             Scotland, United Kingdom &#10070;
         </p>
         <p id="lastModified">
-    
+
         </p>
+
     </footer>
-<script src="js/scripts.js"></script>
+    <script src="scripts/devcbk.js" defer></script>
 </body>
+
 </html>

@@ -100,17 +100,18 @@ footer {
 
 }
 
-main {
+/* main {
     max-width: 840px;
     margin: 0 auto;
-}
+} */
 
 /* when the button is clicked - the open class is toggled (added/removed) */
 .open a {
     display: block;
 }
 
-.mains,.mains2 {
+.mains,
+.mains2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 0.2rem;
@@ -182,22 +183,23 @@ figcaption {
     margin-bottom: 1rem;
 }
 
-.parastory ul li::before{
-    content:"😎";
+.parastory ul li::before {
+    content: "😎";
     position: absolute;
-    top:0;
-    left:0;
-    
+    top: 0;
+    left: 0;
+
 
 }
 
-.card video,.card iframe {
+.card video,
+.card iframe {
     width: 100%;
     max-width: 400px;
     display: block;
     margin: 0 auto;
     border-radius: 10px;
-    
+
 }
 
 .card iframe {
@@ -572,55 +574,55 @@ tr {
         font-size: 1.75rem;
     }
 
-/*ABOUT US STYLING*/
+    /*ABOUT US STYLING*/
 
-.data {
-    position: absolute;
-    margin-top: 1rem;
-    margin-left: 1rem;
+    .data {
+        position: absolute;
+        margin-top: 1rem;
+        margin-left: 1rem;
 
-}
+    }
 
-.cook {
-    position: absolute;
-    margin-bottom: 1rem;
-    margin-right: 1rem;
-    bottom: 1rem;
-    right: 1rem;
+    .cook {
+        position: absolute;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+        bottom: 1rem;
+        right: 1rem;
 
-}
+    }
 
-.heading {
-    background-color: darkred;
-    color: var(--font-color);
-    padding: 0.5rem;
-    position: relative;
-    left: -10px;
-    top: 0;
-    margin: 0;
-    z-index: 10;
-}
+    .heading {
+        background-color: darkred;
+        color: var(--font-color);
+        padding: 0.5rem;
+        position: relative;
+        left: -10px;
+        top: 0;
+        margin: 0;
+        z-index: 10;
+    }
 
-.cook .heading::after {
-    content: "👨🏽‍💻"
-}
+    .cook .heading::after {
+        content: "👨🏽‍💻"
+    }
 
-table {
-    border-collapse: collapse;
-    border: 2px solid var(--button-hover-color);
-    letter-spacing: 1px;
-    font-size: clamp(13px, 1.2vw, 16px);
-    width: 100%;
-    background-color: rgba(110, 110, 110, 0.8)
-}
+    table {
+        border-collapse: collapse;
+        border: 2px solid var(--button-hover-color);
+        letter-spacing: 1px;
+        font-size: clamp(13px, 1.2vw, 16px);
+        width: 100%;
+        background-color: rgba(110, 110, 110, 0.8)
+    }
 
-tr {
-    color: var(--font-next-color);
-    font-weight: 600;
-}
+    tr {
+        color: var(--font-next-color);
+        font-weight: 600;
+    }
 
-#cookIcon {
-    display: none;
-}
+    #cookIcon {
+        display: none;
+    }
 
 }

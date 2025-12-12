@@ -110,7 +110,7 @@ main {
     display: block;
 }
 
-.mains {
+.mains,.mains2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 0.2rem;
@@ -146,8 +146,9 @@ figcaption {
 
 .card {
     display: flex;
+    width: 96%;
     flex-direction: column;
-    padding: 1rem 0.3rem;
+    padding: 1rem 0.5rem;
     margin: 1rem auto;
     border: 1px solid var(--gradient-form-color);
     text-align: center;
@@ -169,12 +170,42 @@ figcaption {
     margin: 0.2rem 0.5rem;
 }
 
-.card video {
+.parastory ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.parastory ul li {
+    text-align: left;
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.parastory ul li::before{
+    content:"😎";
+    position: absolute;
+    top:0;
+    left:0;
+    
+
+}
+
+.card video,.card iframe {
     width: 100%;
     max-width: 400px;
     display: block;
     margin: 0 auto;
     border-radius: 10px;
+    
+}
+
+.card iframe {
+    width: 100%;
+    height: 315px;
+    border: none;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .login-form-area {
@@ -350,6 +381,8 @@ figcaption {
     float: right;
     cursor: pointer;
 }
+
+
 
 
 @media (min-width: 37.5em) {

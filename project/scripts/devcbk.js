@@ -44,7 +44,13 @@ document.addEventListener("DOMContentLoaded", () => {
             description: "Master software development on One Powerful Platform",
 
             src: "images/SoftwareDevsCookbook.mp4"
-        }
+        },
+        {
+            Name: "Resources",
+            description: "Some useful content on the web",
+
+            src: "https://www.youtube.com/embed/aIy46jQsDLM"
+        },
     ];
 
     //loop through the images
@@ -71,9 +77,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+    if (document.querySelector(".mains")) {
+        renderVids(vidpage.filter(vid => vid.Name === "Welcome Video"));
+    }
 
-    renderVids(vidpage);
 
+    function renderResource(vids) {
+        const container = document.querySelector(".mains2");
+        container.innerHTML = vids.map(vid => `
+        <div class="card">
+            <h3>${vid.Name}</h3>
+
+            <p><span>${vid.description}</span></p>
+                  
+            <iframe
+                src=${vid.src}
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-inpicture"
+                allowfullscreen>
+            </iframe>
+            
+            </div>
+                    <section class="parastory">
+            <h2>Useful Cookbook Resources:
+            </h2>
+            <p>Although not exhaustive, the resources cited on this page guide the user in detail through every stage of modern software development, from initial concept to final deployment. <br><br>This platform brings together best-practice documentation, hands-on tutorials and expert insight </p>
+            <ul>
+            <li><a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a> -- Comprehensive documentation and tutorials for web development technologies.</li>
+
+            <li><a href="https://freecodecamp.org/" target="_blank" rel="noopener noreferrer">freeCodeCamp</a> -- Interactive coding lessons and projects to learn full-stack development.</li>
+
+            <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a> -- Beginner-friendly tutorials covering web languages like HTML, CSS, and JavaScript.</li>
+
+            <li><a href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer">Stack Overflow</a> -- Community-driven Q&A for coding problems and solutions.</li>
+
+            <li><a href="https://github.com/explore" target="_blank" rel="noopener noreferrer">GitHub Explore</a> -- Discover open-source projects to learn from and contribute to.</li>
+            </ul>
+        
+        </section>`).join("");
+
+    }
+
+    if (document.querySelector(".mains2")) {
+        renderResource(vidpage.filter(vid => vid.Name === "Resources"));
+    }
 
 
     //getting stored value in localStorage

@@ -230,6 +230,15 @@ figcaption {
     /* padding: 0 .2rem; */
 }
 
+.mains3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 12px;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
 .wf1 label {
     display: block;
     padding-top: 0.2rem;

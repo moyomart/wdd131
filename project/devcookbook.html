@@ -29,9 +29,7 @@
                 <li><a href="#" title="AboutUs" id="about-us">About Us</a></li>
                 <li><a href="#" title="Resources" id="resource">Resources</a></li>
                 <li><a href="#" title="Login" id="log-in">Login</a></li>
-                <li>
-                    <button id="enrollbtn">Enroll</button>
-                </li>
+                <li><a href="#" title="enrolbtn" id="enrollbtn">Enroll</a></li>
             </ul>
 
         </nav>
@@ -46,52 +44,80 @@
 
             </section>
         </div>
-
-
         <!-- Sign Up Form -->
-        <form method="get" action="thanks.html" class="wf1">
-            <fieldset>
-                <legend>Applicant Information</legend>
-                <label>First Name* <input type="text" name="fname" required></label>
-                <label>Last Name* <input type="text" name="lname" required></label>
-                <label>Phone <input type="tel" name="phone" placeholder="1235551234"></label>
-                <label>Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
+        <div class="form-area">
+            <form method="get" action="thanks.html" class="wf1">
+                <fieldset>
+                    <legend>Applicant Information</legend>
+                    <label>First Name* <input type="text" name="fname" required></label>
+                    <label>Last Name* <input type="text" name="lname" required></label>
+                    <label>Phone <input type="tel" name="phone" placeholder="1235551234"></label>
+                    <label>Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
 
 
-            </fieldset>
+                </fieldset>
 
-            <fieldset>
-                <legend>Course Information</legend>
-                <div>Experience</div>
-                <label><input type="radio" name="audience" value="beginner">Beginner</label>
-                <label><input type="radio" name="audience" value="intermediate">Intermediate</label>
-                <label><input type="radio" name="audience" value="advanced">Advanced</label>
+                <fieldset>
+                    <legend>Course Information</legend>
+                    <div>Experience</div>
+                    <label><input type="radio" name="audience" value="beginner">Beginner</label>
+                    <label><input type="radio" name="audience" value="intermediate">Intermediate</label>
+                    <label><input type="radio" name="audience" value="advanced">Advanced</label>
 
-                <div>Training Needed</div>
-                <label><input type="checkbox" name="code" value="yes">Coding</label>
-                <label><input type="checkbox" name="dbdev" value="yes">Database Development</label>
-                <label><input type="checkbox" name="modelling" value="yes">Modelling Portfolio</label>
-                <label><input type="checkbox" name="wedbev" value="yes">Web Development</label>
+                    <div>Training Needed</div>
+                    <label><input type="checkbox" name="code" value="yes">Coding</label>
+                    <label><input type="checkbox" name="dbdev" value="yes">Database Development</label>
+                    <label><input type="checkbox" name="modelling" value="yes">Modelling Portfolio</label>
+                    <label><input type="checkbox" name="wedbev" value="yes">Web Development</label>
 
-            </fieldset>
+                </fieldset>
 
-            <fieldset>
-                <legend>Funding</legend>
-                <label>Anticipated Completion Date <input type="date" name="completeDate"></label>
-                <label>Course Subject
-                    <select name="product" id="prod-select">
-                        <option value="" disabled selected>Please Select...</option>
+                <fieldset>
+                    <legend>Funding</legend>
+                    <label>Anticipated Completion Date <input type="date" name="completeDate"></label>
+                    <label>Course Subject
+                        <select name="product" id="prod-select">
+                            <option value="" disabled selected>Please Select...</option>
 
-                    </select>
-                </label>
+                        </select>
+                    </label>
 
-            </fieldset>
+                </fieldset>
 
-            <input type="submit" value="Apply for my Course">
-        </form>
-<aside>
-    
-</aside>
+                <input type="submit" value="Apply for my Course">
+            </form>
+            <div class="alumni-area">
+            <div class="alumni">
+                <h2>Our Alumni</h2>
+                <div class="gallery-container">
+                
+                    <!-- Image 1 on the side -->
+                    <div class="gallery-large">
+                        <img src="images/amanda.webp" 
+                         alt="Alumni img1" load="lazy">
+                    </div>
+                
+                    <!-- 4 small images -->
+                    <div class="gallery-small-grid">
+                
+                        <img src="images/kent.webp" alt="Alumi img2" load="lazy">
+                
+                    <img src="images/profile.webp" alt="Alumi img3" load="lazy">
+               
+                    </div>
+                    <div class="resource-guide">
+                        <h2>Resources</h2>
+                        <ul>
+                            <li>Python</li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        </div>
+
 
     </main>
     <footer>

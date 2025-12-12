@@ -100,10 +100,10 @@ footer {
 
 }
 
-/* main {
+main {
     max-width: 840px;
     margin: 0 auto;
-} */
+}
 
 /* when the button is clicked - the open class is toggled (added/removed) */
 .open a {
